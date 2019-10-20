@@ -4,6 +4,7 @@
 
 ## Limitations
 
+- The module is dependant on the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 - Changes outside of Terraform are not detected, and re-applying does not resolve this.
 - It's not yet possible to break replication and turn the replica into a primary server.
 - It's not yet possible to specify a different location, i.e. cross-region replication.
