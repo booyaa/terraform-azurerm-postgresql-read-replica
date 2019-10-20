@@ -1,8 +1,8 @@
 resource "null_resource" "postgresql-read-replica" {
   triggers = {
-    resource_group    = var.resource_group_name
-    server-name       = var.postgresql_primary_server_name
-    read-replica-name = var.postgresql_replica_server_name
+    resource_group_name            = var.resource_group_name
+    postgresql_primary_server_name = var.postgresql_primary_server_name
+    postgresql_replica_server_name = var.postgresql_replica_server_name
   }
 
   # enables replication on the primary server
