@@ -40,6 +40,8 @@ resource "azurerm_postgresql_firewall_rule" "demo-replica" {
   server_name         = module.demo-replica.replica_name
   start_ip_address    = "8.8.8.8"
   end_ip_address      = "8.8.8.8"
+
+  depends_on = [module.demo-replica]
 }
 ```
 
