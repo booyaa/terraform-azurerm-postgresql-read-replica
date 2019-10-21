@@ -33,4 +33,14 @@ az postgres server replica create \
   --resource-group ${var.resource_group_name}
 CREATE_REPLICA
   }
+
+  provisioner "local-exec" {
+    when = "destroy" 
+    command = <<DESTROY_REPLICA
+az postgres server delete \
+  --name ${var.postgresql_replica_server_name} \
+  --resource-group ${var.resource_group_name} \
+  --yes
+DESTROY_REPLICA    
+  }
 }
