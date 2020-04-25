@@ -1,6 +1,8 @@
 # terraform-azurerm-postgresql-read-replica
 
- A module to manage Azure Database for PostgreSQL Read Replica until support for PostgreSQL read replicas is implemented. See issue [terraform-provider-azurerm#2819](https://github.com/terraform-providers/terraform-provider-azurerm/issues/2819) for more details.
+A module to manage Azure Database for PostgreSQL Read Replica until support for PostgreSQL read replicas is implemented. See issue [terraform-provider-azurerm#2819](https://github.com/terraform-providers/terraform-provider-azurerm/issues/2819) for more details.
+ 
+Update: As of version 2.7.0, the Azure provider now supports the creation of [replicas](https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#create_mode). I'll be reviewing what if any purpose this module will now play.
 
 ## Limitations
 
